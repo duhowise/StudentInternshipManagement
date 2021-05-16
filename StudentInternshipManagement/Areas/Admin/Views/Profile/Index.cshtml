@@ -1,7 +1,7 @@
 ﻿@model Models.Admin
 @{
-    ViewBag.Title = "Hồ sơ";
-    ViewBag.Category = "Hồ sơ";
+    ViewBag.Title = "file";
+    ViewBag.Category = "file";
     ViewBag.Section = "overview &amp; stats";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
@@ -106,7 +106,7 @@
 
             <div class="profile-user-info profile-user-info-striped">
                 <div class="profile-info-row">
-                    <div class="profile-info-name"> Họ và tên </div>
+                    <div class="profile-info-name">First and last name</div>
 
                     <div class="profile-info-value">
                         <span class="editable" id="username">@Model.AdminName</span>
@@ -114,7 +114,7 @@
                 </div>
 
                 <div class="profile-info-row">
-                    <div class="profile-info-name"> Ngày sinh </div>
+                    <div class="profile-info-name">Date of birth</div>
 
                     <div class="profile-info-value">
                         <span class="editable" id="age">@Model.BirthDate.ToString("dd/MM/yyyy")</span>
@@ -130,7 +130,7 @@
                 </div>
 
                 <div class="profile-info-row">
-                    <div class="profile-info-name"> Địa chỉ </div>
+                    <div class="profile-info-name">Address</div>
 
                     <div class="profile-info-value">
                         <i class="fa fa-map-marker light-orange bigger-110"></i>
@@ -139,7 +139,7 @@
                 </div>
 
                 <div class="profile-info-row">
-                    <div class="profile-info-name"> Số điện thoại </div>
+                    <div class="profile-info-name">phone number</div>
 
                     <div class="profile-info-value">
                         <span class="editable" id="age">@Model.Phone</span>
@@ -147,7 +147,7 @@
                 </div>
 
                 <div class="profile-info-row">
-                    <div class="profile-info-name"> Khoa </div>
+                    <div class="profile-info-name">Faculty</div>
 
                     <div class="profile-info-value">
                         <span class="editable" id="about">@Model.Department.DepartmentName</span>
@@ -166,7 +166,7 @@
             <div class="profile-info-row">
                 <div class="profile-info-name"></div>
                 <div class="profile-info-value">
-                    <button class="btn btn-info btn-lg" onclick="location.href='@Url.Action("Edit", "Profile", new {Area="Admin"})'">Chỉnh sửa hồ sơ</button>
+                    <button class="btn btn-info btn-lg" onclick="location.href='@Url.Action("Edit", "Profile", new {Area="Admin"})'">Edit Profile</button>
                 </div>
             </div>
 

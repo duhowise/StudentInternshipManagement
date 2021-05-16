@@ -12,7 +12,7 @@ namespace Repositories
 {
     public class InternshipRepository:IDisposable
     {
-        private readonly WebContext _context = new WebContext();
+        private readonly ApplicationDbContext _context = new ApplicationDbContext();
 
         public IQueryable<Internship> GetAll()
         {

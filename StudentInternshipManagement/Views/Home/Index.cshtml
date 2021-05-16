@@ -3,7 +3,7 @@
 @using Services
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "Homepage - Trang quản lý thực tập";
+    ViewBag.Title = "Homepage - Internship management page";
     string message = ViewBag.Message ?? string.Empty;
 }
 @{
@@ -36,7 +36,7 @@
         <div class="container">
             <div class="page-header">
                 <h1 id="newslist-header">
-                    Tin tức - Thông báo
+                    News - Notice
                 </h1>
             </div>
             <div class="row">
@@ -47,15 +47,15 @@
                         </li>
 
                         <li class="" style='display: @(role.Equals("Student") ? "inline-block" : "none")'>
-                            <a href="/Student/Profile" aria-expanded="false">Sinh viên</a>
+                            <a href="/Student/Profile" aria-expanded="false">Student</a>
                         </li>
 
                         <li class="" style='display: @(role.Equals("Teacher") ? "inline-block" : "none")'>
-                            <a href="/Teacher/Profile" aria-expanded="false">Giảng viên</a>
+                            <a href="/Teacher/Profile" aria-expanded="false">Lecturers</a>
                         </li>
 
                         <li class="" style='display: @(role.Equals("Admin") ? "inline-block" : "none")'>
-                            <a href="/Admin/Profile" aria-expanded="false">Giáo vụ</a>
+                            <a href="/Admin/Profile" aria-expanded="false">Ministry</a>
                         </li>
                     </ul>
 

@@ -11,7 +11,7 @@ namespace Repositories
 {
     public class StudentClassRepository : IDisposable
     {
-        private readonly WebContext _context=new WebContext();
+        private readonly ApplicationDbContext _context=new ApplicationDbContext();
 
         public IQueryable<StudentClass> GetAll()
         {

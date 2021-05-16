@@ -47,7 +47,7 @@ namespace StudentInternshipManagement.Areas.Student.Controllers
                     model.Avatar = $"{model.StudentId}{extension}";
                 }
 
-                ViewBag.Message = _service.Update(model) ? "Thành công" : "Thất bại";
+                ViewBag.Message = _service.Update(model) ? "Success" : "Failure";
             }
 
             return RedirectToAction("Index");

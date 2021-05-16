@@ -66,6 +66,11 @@
     <Compile Include="LearningClass.cs" />
     <Compile Include="LearningClassStudent.cs" />
     <Compile Include="Message.cs" />
+    <Compile Include="Migrations\202105161205088_InitialIdentityContext.cs" />
+    <Compile Include="Migrations\202105161205088_InitialIdentityContext.Designer.cs">
+      <DependentUpon>202105161205088_InitialIdentityContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="News.cs" />
     <Compile Include="Notification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,11 +81,15 @@
     <Compile Include="Subject.cs" />
     <Compile Include="Teacher.cs" />
     <Compile Include="TrainingMajor.cs" />
-    <Compile Include="WebContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105161205088_InitialIdentityContext.resx">
+      <DependentUpon>202105161205088_InitialIdentityContext.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

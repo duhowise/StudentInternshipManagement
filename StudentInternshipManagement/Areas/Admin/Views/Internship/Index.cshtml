@@ -2,9 +2,9 @@
 @using Models
 @using StudentInternshipManagement.Areas.Admin.Models
 @{
-    ViewBag.Title = "Quản lý thực tập";
-    ViewBag.Category = "Quản lý";
-    ViewBag.Section = "Thực tập";
+    ViewBag.Title = "Internship Manager";
+    ViewBag.Category = "Manage";
+    ViewBag.Section = "Internship";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
     var isProcessing = (bool?) (ViewBag.IsProcessing);
     var semester = (int)(ViewBag.Semester);
@@ -18,20 +18,20 @@
 
 <button class="btn btn-primary" style='display: @(isProcessing==null?"inline-block":"none")' onclick="location.href='@Url.Action("Process", "Internship")'">
     <i class="ace-icon fa fa-flask align-top bigger-125"></i>
-    Xử lý nguyện vọng thực tập
-</button>
+    Handling internship aspirations 
+    </button>
 
 <div class="alert alert-block alert-info" style='display: @(isProcessing==true?"inline-block":"none")'>
     <button type="button" class="close" data-dismiss="alert">
         <i class="ace-icon fa fa-times"></i>
     </button>
     <i class="ace-icon fa fa-check green"></i>
-    Đang xử lý nguyện vọng thực tập kỳ
+    Processing request for internship period
     <strong class="green">
         @semester
     </strong>
-    <br/>
-    Xin vui lòng đợi trong giây lát!
+    <br />
+    Please wait a moment! 
 </div>
 
 <div class="alert alert-block alert-success" style='display: @(isProcessing==false?"inline-block":"none")'>
@@ -39,13 +39,13 @@
         <i class="ace-icon fa fa-times"></i>
     </button>
     <i class="ace-icon fa fa-check green"></i>
-    Xử lý nguyện vọng thực tập kỳ
+    Handling internship requests
     <strong class="green">
         @semester
     </strong>
-    thành công
+    success
     <br />
-    Xem kết quả ở bảng dưới
+    See the results in the table below
 </div>
 
 @(Html.Kendo().Grid<InternshipViewModel>()
@@ -66,7 +66,7 @@
       })
       .ToolBar(toolbar =>
       {
-          toolbar.Pdf().Text("Xuất báo cáo");
+          toolbar.Pdf().Text("Export report");
       })
       .Pageable()
       .Sortable(sortable => { sortable.SortMode(GridSortMode.SingleColumn); })
